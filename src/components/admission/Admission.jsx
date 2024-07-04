@@ -1,7 +1,12 @@
+import { useModal } from "../../context/ModalContext";
 import Button from "../../ui/Button";
+import Modal from "../../ui/Modal";
 import Section from "../../ui/Section";
+import AdmissionForm from "./AdmissionForm";
 
 const Admission = () => {
+  const { openModal } = useModal();
+
   return (
     <Section>
       <div className="flex flex-col items-center justify-center h-full gap-6">
@@ -12,8 +17,11 @@ const Admission = () => {
           Enrol today and embark on a transformative <br /> learning journey at
           Airblack Academy.
         </h4>
-        <Button className={`bg-n-1  text-n-8`}>Apply Now</Button>
+        <Button onClick={() => openModal(AdmissionForm)} className={`bg-n-1`}>
+          Apply Now
+        </Button>
       </div>
+      <Modal />
     </Section>
   );
 };

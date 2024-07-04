@@ -1,6 +1,6 @@
 const Hero = () => {
   return (
-    <div className=" relative ">
+    <div className="relative h-[90vh]">
       <div className="w-full h-[37.5rem]">
         <img
           src="/hero.webp"
