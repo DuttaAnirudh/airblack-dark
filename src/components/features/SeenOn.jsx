@@ -1,3 +1,6 @@
+import { useInView, motion } from "framer-motion";
+import { useRef } from "react";
+
 const images = [
   { name: "forbes", src: "/forbes.webp" },
   { name: "yourstory", src: "/yourstory.png" },
@@ -8,8 +11,29 @@ const images = [
 ];
 
 const SeenOn = () => {
+  const ref = useRef();
+  const inView = useInView(ref);
+
+  const variant = {
+    initial: { y: "5rem", opacity: 0 },
+    animate: {
+      y: 0,
+      opacity: 1,
+      transition: {
+        duration: 1,
+        type: "spring",
+      },
+    },
+  };
+
   return (
-    <div className="flex flex-col items-center justify-center gap-4">
+    <motion.div
+      ref={ref}
+      className="flex flex-col items-center justify-center gap-4"
+      variants={variant}
+      initial="initial"
+      animate={inView && "animate"}
+    >
       {/* HEADING */}
       <div className="flex items-center  gap-4 w-full">
         <hr className="border-[1px] border-n-4 w-[45%] ml-auto" />
@@ -29,7 +53,7 @@ const SeenOn = () => {
           </div>
         ))}
       </div>
-    </div>
+    </motion.div>
   );
 };
 

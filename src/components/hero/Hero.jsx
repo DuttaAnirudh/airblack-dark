@@ -1,14 +1,53 @@
+import { motion, useInView } from "framer-motion";
+import { useRef } from "react";
+
 const Hero = () => {
+  const ref = useRef();
+  const imageInView = useInView(ref);
+
+  const imageVariant = {
+    initial: { y: "-100%", opacity: 0 },
+    animate: {
+      y: 0,
+      opacity: 1,
+      transition: {
+        duration: 1,
+      },
+    },
+  };
+
+  const headingVariant = {
+    initial: { y: "-15rem", opacity: 0 },
+    animate: {
+      y: 0,
+      opacity: 1,
+      transition: {
+        duration: 0.95,
+      },
+    },
+  };
+
   return (
     <div className="relative h-[90vh]">
-      <div className="w-full h-[37.5rem]">
+      <motion.div
+        className="w-full h-[37.5rem] relative z-20"
+        ref={ref}
+        variants={imageVariant}
+        initial="initial"
+        animate={imageInView && "animate"}
+      >
         <img
           src="/hero.webp"
           className="w-full h-full object-cover"
           alt="Hero Image"
         />
-      </div>
-      <div>
+      </motion.div>
+      <motion.div
+        className="relative z-10"
+        variants={headingVariant}
+        initial="initial"
+        animate={imageInView && "animate"}
+      >
         <h1 className="flex flex-col items-center gap-3">
           <span className="uppercase font-medium tracking-[.4rem] text-[1.37rem] mt-8 mb-2">
             Welcome to Airblack
@@ -21,7 +60,7 @@ const Hero = () => {
             experts
           </span>
         </h1>
-      </div>
+      </motion.div>
     </div>
   );
 };
