@@ -1,3 +1,4 @@
+import { Toaster } from "react-hot-toast";
 import Admission from "./components/admission/Admission";
 import AppInfo from "./components/appInfo/AppInfo";
 import Courses from "./components/courses/Courses";
@@ -10,32 +11,58 @@ import News from "./components/news/News";
 
 function App() {
   return (
-    <div className="max-w-[100rem] mx-auto">
-      {/* MAIN */}
-      <Header />
-      <Hero />
+    <>
+      <div className="max-w-[100rem] mx-auto">
+        {/* MAIN */}
+        <Header />
+        <Hero />
 
-      {/* STATS & FEATURED ON */}
-      <Features />
+        {/* STATS & FEATURED ON */}
+        <Features />
 
-      {/* SCHOOL COURSES */}
-      <Courses />
+        {/* SCHOOL COURSES */}
+        <Courses />
 
-      {/* SCHOOL COURSES */}
-      <Instructors />
+        {/* SCHOOL COURSES */}
+        <Instructors />
 
-      {/* DOWNLOAD THE APP */}
-      <AppInfo />
+        {/* DOWNLOAD THE APP */}
+        <AppInfo />
 
-      {/* ADMISSION FORM */}
-      <Admission />
+        {/* ADMISSION FORM */}
+        <Admission />
 
-      {/* LATEST NEWS */}
-      <News />
+        {/* LATEST NEWS */}
+        <News />
 
-      {/* FOOTER */}
-      <Footer />
-    </div>
+        {/* FOOTER */}
+        <Footer />
+      </div>
+
+      {/* TOAST MESSAGES */}
+      <Toaster
+        position="top-center"
+        gutter={12}
+        containerStyle={{ margin: "8px" }}
+        toastOptions={{
+          success: {
+            duration: 4000,
+          },
+          error: {
+            duration: 5000,
+          },
+          style: {
+            fontSize: "16px",
+            maxWidth: "500px",
+            padding: "10px 15px",
+            backgroundColor: "#280B45",
+            color: "#FFE98A",
+            border: "1px solid #CAC6DD",
+          },
+        }}
+        reverseOrder={false}
+      />
+    </>
   );
 }
 

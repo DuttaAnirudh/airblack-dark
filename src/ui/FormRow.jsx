@@ -1,12 +1,14 @@
-function FormRow({ label, error, children }) {
+function FormRow({ label, id, error, alignment, className, children }) {
   return (
-    <div className="flex flex-col gap-2 items-start justify-start">
+    <div
+      className={`flex flex-col gap-2 items-start justify-start ${alignment} ${className}`}
+    >
       {label && (
-        <label htmlFor={children.props.id} className="font-light">
+        <label htmlFor={id} className={`font-light ${alignment}`}>
           {label}
         </label>
       )}
-      {children}
+      <div className="flex items-center justify-start gap-2">{children}</div>
       {error && <p className="text-red-600 text-xs">{error}</p>}
     </div>
   );
