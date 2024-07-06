@@ -1,7 +1,9 @@
 import { motion, useInView } from "framer-motion";
-import { useRef } from "react";
+import { useRef, useState } from "react";
 
 const Hero = () => {
+  const [imageLoaded, setImageLoaded] = useState(false);
+
   const ref = useRef();
   const imageInView = useInView(ref);
 
@@ -27,6 +29,10 @@ const Hero = () => {
     },
   };
 
+  const handleImageLoad = () => {
+    setImageLoaded(true);
+  };
+
   return (
     <div className="relative h-[90vh]">
       <motion.div
@@ -34,19 +40,20 @@ const Hero = () => {
         ref={ref}
         variants={imageVariant}
         initial="initial"
-        animate={imageInView && "animate"}
+        animate={imageLoaded && imageInView ? "animate" : "initial"}
       >
         <img
           src="/hero.webp"
           className="w-full h-full object-cover"
           alt="Hero Image"
+          onLoad={handleImageLoad}
         />
       </motion.div>
       <motion.div
         className="relative z-10"
         variants={headingVariant}
         initial="initial"
-        animate={imageInView && "animate"}
+        animate={imageLoaded && imageInView ? "animate" : "initial"}
       >
         <h1 className="flex flex-col items-center gap-3">
           <span className="uppercase font-medium tracking-[.4rem] text-[1.37rem] mt-8 mb-2">

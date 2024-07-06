@@ -1,21 +1,7 @@
 import { useRef } from "react";
 import { useInView, motion } from "framer-motion";
 import CardXL from "../../ui/CardXL";
-
-const courses = [
-  {
-    title: "Certified Beauty Professional",
-    desc: " Learn Makeup, Hairstyling, Nail Art and many more courses from India&apos;s leading beauty experts and professionals",
-    imgSrc: "/beautyClub.webp",
-    logoImgSrc: "/beautyClubLogo.webp",
-  },
-  {
-    title: "Certified Baking Professional",
-    desc: "Transform yourself into a baking professional by learning from India&apos;s top culinary experts and professionals",
-    imgSrc: "/culinaryClub.webp",
-    logoImgSrc: "/culinaryClubLogo.webp",
-  },
-];
+import { courses } from "../../lib/data";
 
 const Courses = () => {
   const ref = useRef();

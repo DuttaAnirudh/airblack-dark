@@ -1,29 +1,4 @@
-const socialData = [
-  {
-    name: "instagram",
-    imgSrc: "/Instagram.webp",
-    link: "https://www.instagram.com/beauty.airblack/",
-  },
-  {
-    name: "facebook",
-    imgSrc: "/fb.webp",
-    link: "https://www.facebook.com/beauty.airblack/",
-  },
-  {
-    name: "linkedin",
-    imgSrc: "/linkedin.webp",
-    link: "https://www.linkedin.com/company/airblack/",
-  },
-  {
-    name: "twitter",
-    imgSrc: "/twitter.webp",
-    link: "https://x.com/clubairblack?lang=en",
-  },
-];
-
-const footerItemTop = ["Newsroom", "About Us", "Contact Us"];
-
-const footerItemBottom = ["Terms", "Privacy", "Cookies", "Refund"];
+import { socialData, footerItemTop, footerItemBottom } from "../../lib/data";
 
 const Footer = () => {
   return (

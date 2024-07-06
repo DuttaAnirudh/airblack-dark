@@ -1,16 +1,7 @@
 import { useRef } from "react";
 import { useInView, motion } from "framer-motion";
 import StatBox from "../../ui/StatBox";
-
-const statistics = [
-  { img: "/group.svg", stat: "35,000", tagline: "Student community" },
-  {
-    heading: "Students from over",
-    stat: "300",
-    tagline: "Cities across India & UAE",
-  },
-  { img: "/trustpilot.webp", stat: "4.8/5", tagline: "Rated by students" },
-];
+import { statistics } from "../../lib/data";
 
 const Stats = () => {
   const ref = useRef();

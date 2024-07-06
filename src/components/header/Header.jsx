@@ -1,15 +1,7 @@
 import { useModal } from "../../context/ModalContext";
 import Enroll from "./Enroll";
 import LoginForm from "./LoginForm";
-
-const menus = [
-  "Beauty Club",
-  "Culinary Club",
-  "Studios",
-  "Seminars",
-  "Community",
-  "About Us",
-];
+import { headerMenus as menus } from "../../lib/data";
 
 const Header = () => {
   const { openModal } = useModal();

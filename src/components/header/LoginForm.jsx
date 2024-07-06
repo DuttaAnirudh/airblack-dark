@@ -4,13 +4,7 @@ import FormButton from "../../ui/FormButton";
 import FormRow from "../../ui/FormRow";
 import Input from "../../ui/Input";
 import Select from "../../ui/Select";
-
-const callingCodes = [
-  { value: "+91", label: "IN +91" },
-  { value: "+971", label: "AE +971" },
-  { value: "+44", label: "GB +44" },
-  { value: "+1", label: "US +1" },
-];
+import { callingCodes } from "../../lib/data";
 
 const LoginForm = () => {
   const {

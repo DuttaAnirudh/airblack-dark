@@ -1,14 +1,6 @@
 import { useInView, motion } from "framer-motion";
 import { useRef } from "react";
-
-const images = [
-  { name: "forbes", src: "/forbes.webp" },
-  { name: "yourstory", src: "/yourstory.png" },
-  { name: "toi", src: "/toi.svg" },
-  { name: "economic", src: "/economic.webp" },
-  { name: "entrepreneur", src: "/entrepreneur.webp" },
-  { name: "livemint", src: "/livemint.webp" },
-];
+import { imagesNewsIcons as images } from "../../lib/data";
 
 const SeenOn = () => {
   const ref = useRef();

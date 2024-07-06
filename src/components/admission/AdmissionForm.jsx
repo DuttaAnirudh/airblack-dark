@@ -7,48 +7,13 @@ import Select from "../../ui/Select";
 import SelectSearch from "../../ui/SelectSearch";
 import { useModal } from "../../context/ModalContext";
 import toast from "react-hot-toast";
-
-const callingCodes = [
-  { value: "+91", label: "IN +91" },
-  { value: "+971", label: "AE +971" },
-  { value: "+44", label: "GB +44" },
-  { value: "+1", label: "US +1" },
-];
-
-const clubs = [
-  { value: "beauty", label: "Airblack Beauty Club" },
-  { value: "culinary", label: "Airblack Culinary Club" },
-];
-
-const professions = [
-  { value: "student", label: "Student" },
-  { value: "beautician", label: "Beautician" },
-  { value: "working professional", label: "Working Professional" },
-  { value: "homemaker", label: "Homemaker" },
-  { value: "entrepreneur", label: "Entrepreneur" },
-  { value: "other", label: "Other" },
-];
-
-const goals = [
-  {
-    value: "become a makeup artist",
-    label: "I want to become a makeup artist",
-  },
-  { value: "get better", label: "I'm already a MUA and looking to get better" },
-  { value: "for my own makeup", label: "I want to learn for my own makeup" },
-  {
-    value: "instagram or blogging",
-    label: "I want to learn for Instagram or blogging",
-  },
-  { value: "exploring", label: "I'm just exploring" },
-];
-
-const cities = [
-  { value: "new delhi", label: "New Delhi" },
-  { value: "chandigarh", label: "Chandigarh" },
-  { value: "jaipur", label: "Jaipur" },
-  { value: "lucknow", label: "Lucknow" },
-];
+import {
+  callingCodes,
+  clubs,
+  professions,
+  goals,
+  cities,
+} from "../../lib/data";
 
 const AdmissionForm = () => {
   const { closeModal } = useModal();
