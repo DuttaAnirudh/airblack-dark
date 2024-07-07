@@ -8,6 +8,7 @@ import Header from "./components/header/Header";
 import Hero from "./components/hero/Hero";
 import Instructors from "./components/instructors/Instructors";
 import News from "./components/news/News";
+import ImageCarousel from "./ui/ImageCarousel";
 
 function App() {
   return (

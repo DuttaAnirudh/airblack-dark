@@ -8,6 +8,11 @@ export const headerMenus = [
   "About Us",
 ];
 
+// HERO
+export const heroImagesTab = ["/tab1.webp", "/tab2.webp", "/tab3.webp"];
+
+export const heroImagesMob = ["/mob1.webp", "/mob2.webp", "/mob3.webp"];
+
 // ADMISSION/LOGIN FORM
 export const callingCodes = [
   { value: "+91", label: "IN +91" },
