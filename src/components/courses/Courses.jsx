@@ -29,20 +29,20 @@ const Courses = () => {
       animate={inView && "animate"}
     >
       <motion.h2
-        className="font-boska font-semibold tracking-wider text-7xl text-color-2 "
+        className="font-boska font-semibold tracking-wider text-6xl lg:text-7xl text-color-2 "
         variants={variant}
       >
         Our School
       </motion.h2>
       <motion.p
-        className="font-extralight text-2xl text-n-2 max-w-[80rem] text-center mb-8"
+        className="font-extralight text-lg lg:text-xl xl:text-2xl text-n-2 max-w-[80rem] text-center mb-8 px-2 xl:px-0"
         variants={variant}
       >
         Airblack Academy&apos;s specialized divisions offer a broad spectrum of
         essential skills, enabling individuals to achieve meaningful lives and
         livelihoods through focused learning
       </motion.p>
-      <div className="flex items-center justify-center gap-24">
+      <div className="flex flex-col lg:flex-row items-center justify-center gap-12 xl:gap-24">
         {courses.map((item) => (
           <CardXL
             key={item.title}

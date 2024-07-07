@@ -54,22 +54,22 @@ const CardXL = ({ mainImg, logoImg, title, desc, color = "text-n-1" }) => {
 
   return (
     <motion.div
-      className="flex flex-col items-start justify-start gap-6 w-[30rem]"
+      className="flex flex-col items-center lg:items-start justify-start gap-6 max-w-[30rem] px-2 lg:px-0"
       ref={ref}
       variants={variant}
       initial="initial"
       animate={inView && "animate"}
     >
       {/* Image Container */}
-      <div className=" w-[30rem] relative">
+      <div className=" max-w-[28rem] 2xl:w-[30rem] relative">
         {/* Main Image */}
-        <div className="w-[31.5rem] -ml-2">
+        <div className="max-w-[31.5rem] -ml-2">
           <img className="w-full h-full" src={mainImg} alt={title} />
         </div>
 
         {/* Course Logo */}
         <motion.div
-          className="absolute top-4 left-6 w-[7rem]"
+          className="absolute top-4 left-6 w-[5rem] md:w-[6rem] lg:w-[7rem]"
           ref={logoImgRef}
           variants={logoVariant}
           initial="initial"
@@ -86,20 +86,20 @@ const CardXL = ({ mainImg, logoImg, title, desc, color = "text-n-1" }) => {
 
       {/* text Container */}
       <motion.div
-        className="flex flex-col items-start justify-start gap-1"
+        className="flex flex-col items-center lg:items-start justify-start gap-1 "
         ref={textRef}
         variants={textVariant}
         initial="initial"
         animate={textInView && "animate"}
       >
         <motion.h4
-          className="font-boska font-semibold tracking-widest text-3xl text-color-1"
+          className="font-boska font-semibold tracking-widest text-2xl sm:text-3xl text-color-1 text-center lg:text-start"
           variants={textVariant}
         >
           {title}
         </motion.h4>
         <motion.p
-          className="font-extralight text-n-2 text-[1.1rem]"
+          className="font-extralight text-n-2 text-[0.9rem] md:text-[1.1rem] text-center lg:text-start"
           variants={textVariant}
         >
           {desc}

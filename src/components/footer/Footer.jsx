@@ -2,8 +2,8 @@ import { socialData, footerItemTop, footerItemBottom } from "../../lib/data";
 
 const Footer = () => {
   return (
-    <div className="bg-color-4 pt-10 pb-4">
-      <div className="flex items-start justify-between max-w-screen-xl mx-auto">
+    <div className="bg-color-4 py-10 md:py-0 md:pt-10 md:pb-4">
+      <div className="flex flex-col md:flex-row items-center md:items-start justify-between gap-4 md:gap-0 max-w-screen-xl mx-auto">
         {/* Logo */}
         <div className="w-[7.5rem]">
           <img className="w-full h-full" src="/logo.svg" alt="Airblack Logo" />

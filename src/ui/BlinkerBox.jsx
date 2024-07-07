@@ -57,7 +57,7 @@ const BlinkerBox = ({ text }) => {
           alt="Blinker icon"
         />
       </motion.div>
-      <p className="uppercase text-xs text-red-400 font-semibold tracking-widest">
+      <p className="uppercase text-[0.6rem] md:text-xs text-red-400 font-semibold tracking-widest">
         {text}
       </p>
     </motion.div>

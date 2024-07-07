@@ -38,7 +38,7 @@ const AppInfo = () => {
     <Section>
       <div className="flex flex-col items-center justify-start gap-16">
         <motion.h3
-          className="font-boska text-7xl font-bold tracking-widest text-center"
+          className="font-boska text-5xl lg:text-7xl font-bold tracking-widest text-center"
           ref={ref}
           variants={headingVariant}
           initial="initial"
@@ -48,14 +48,19 @@ const AppInfo = () => {
         </motion.h3>
 
         <motion.div
-          className="w-[60%]"
+          className="w-[90%] md:w-[75%] lg:w-[60%]"
           ref={imgRef}
           variants={imgVariant}
           initial="initial"
           animate={imgInView && "animate"}
         >
           <img
-            className="w-full h-full"
+            className="block md:hidden w-full h-full"
+            src="/appMobile.webp"
+            alt="Mobile App UI"
+          />
+          <img
+            className="hidden md:block w-full h-full"
             src="/appWeb.webp"
             alt="Mobile App UI"
           />

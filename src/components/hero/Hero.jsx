@@ -36,7 +36,7 @@ const Hero = () => {
   return (
     <div className="relative h-[90vh]">
       <motion.div
-        className="w-full h-[37.5rem] relative z-20"
+        className="w-full lg:h-[32rem] xl:[34rem] 2xl:h-[36.5rem] relative z-20"
         ref={ref}
         variants={imageVariant}
         initial="initial"
@@ -59,7 +59,7 @@ const Hero = () => {
           <span className="uppercase font-medium tracking-[.4rem] text-[1.37rem] mt-8 mb-2">
             Welcome to Airblack
           </span>
-          <span className="font-boska font-semibold tracking-widest text-7xl text-color-1">
+          <span className="font-boska font-semibold tracking-widest text-7xl text-color-1 text-center">
             India&apos;s Top Skilling Academy
           </span>
           <span className="text-2xl font-extralight text-center">

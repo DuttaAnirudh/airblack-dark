@@ -1,5 +1,5 @@
 import { useRef } from "react";
-import { useInView, motion } from "framer-motion";
+import { useInView, motion, delay } from "framer-motion";
 
 const Button = ({ className, children, onClick }) => {
   const ref = useRef();
@@ -12,6 +12,7 @@ const Button = ({ className, children, onClick }) => {
       opacity: 1,
       transition: {
         duration: 1,
+        delay: 1,
         type: "spring",
       },
     },

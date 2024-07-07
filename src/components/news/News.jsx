@@ -38,9 +38,9 @@ const News = () => {
   };
   return (
     <Section>
-      <div className="flex flex-col items-center justify-center gap-16 h-full">
+      <div className="flex flex-col items-center justify-center gap-16 h-full mb-16 lg:mb-0">
         <motion.h3
-          className="font-boska font-semibold text-7xl tracking-wider text-n-1"
+          className="font-boska font-semibold text-6xl lg:text-7xl tracking-wider text-n-1"
           ref={ref}
           variants={headingVariant}
           initial="initial"
@@ -50,7 +50,7 @@ const News = () => {
         </motion.h3>
 
         <motion.div
-          className="flex items-start justify-center gap-8 max-w-[80%] mx-auto"
+          className="flex flex-col lg:flex-row items-start justify-center gap-8 max-w-[20rem] md:max-w-[25rem] lg:max-w-[80%] mx-auto"
           ref={imgRef}
           variants={imgVariant}
           initial="initial"

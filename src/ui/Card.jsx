@@ -10,7 +10,7 @@ const Card = ({
   category = null,
 }) => {
   return (
-    <div className="flex flex-col items-start justify-start gap-1 self-stretch w-[15.2rem]">
+    <div className="flex flex-col items-start justify-start gap-1 self-stretch ">
       <div className="w-full mb-2 shadow-lg shadow-n-5">
         <img
           className="w-full h-full object-cover"

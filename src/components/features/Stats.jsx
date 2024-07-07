@@ -21,7 +21,7 @@ const Stats = () => {
 
   return (
     <motion.div
-      className="flex items-center justify-around"
+      className="flex max-[1100px]:flex-col items-center justify-around max-[1100px]:gap-24"
       ref={ref}
       variants={variant}
       initial="initial"
